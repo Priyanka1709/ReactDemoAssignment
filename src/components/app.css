@@ -1,0 +1,32 @@
+.app .body{
+    height: 700px;
+}
+.app .leftPane{
+    float: left;
+    border-right: 1px solid lightgray;
+}
+.app section{
+    width: 50%;
+    height: 100%;
+}
+.app .rightPane{
+    float: right;
+}
+.app footer{
+    position:relative;
+    top: 0px;
+    background-color: #f8f8f8;
+    border: 1px solid #e7e7e7;
+    height:100px;
+}
+.app img{
+    width:130px;
+    height:100px;
+}
+.app button{
+    width:30px;
+    height:30px;
+}
+.app .center{
+    text-align:center;
+}
