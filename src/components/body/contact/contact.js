@@ -1,18 +1,19 @@
 import React from "react";
+import Label from "./controls/label";
 
 const Contact = (props) => {
     return (
             <div className="body">
                 <form onSubmit={(e)=> {alert('Form submitted')}}>
-                    <label>Name: </label>
+                    <Label text="Name: "/>
                     <br/>
                     <input type="text" required/>
                     <br/>
-                    <label>Phone Number: </label>
+                    <Label text="Phone Number: "/>
                     <br/>
                     <input type="number" required/>
                     <br/>
-                    <label>Query: </label>
+                    <Label  text="Query: "/>
                     <br/>
                     <input type="textarea" rows="4" required/>
                     <br/>

@@ -1,54 +1,27 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import Button from "./button";
 
-class IncrementForm extends React.Component{
-    constructor(props){
-        super(props)
-        this.state= {
-			textInput: 10,
-        };
-        
-        this.addButtonHandler= this.addButtonHandler.bind(this);
-        this.subtractButtonHandler= this.subtractButtonHandler.bind(this);
-        this.textBoxChangeHandler= this.textBoxChangeHandler.bind(this);
-    }
-
-    addButtonHandler(){
-        this.setState(prevState=> 
-            {
-                textInput: prevState.textInput++
-            }
-        );
-    }
-
-    subtractButtonHandler(){
-        this.setState(prevState=> 
-            {
-                textInput: prevState.textInput--
-            }
-        );
-    }
-
-    textBoxChangeHandler(e){
-        this.setState({
-			textInput: e.target.value
-		})
-    }
-
-    render(){
-        return (
-            <div className="center">
-                <h3>Increment Form</h3>
-                <input value= {this.state.textInput} type= "number" onChange={this.textBoxChangeHandler}/>
-                <br/><br/>
-                <div>
-                    <Button buttonText="+" clickHandler= {this.addButtonHandler}/>
-                    <Button buttonText="-" clickHandler= {this.subtractButtonHandler}/>
-                </div>
+const IncrementForm= (props) => {
+    return (
+        <div className="center">
+            <h3>Increment Form</h3>
+            <input value= {props.textInput} type= "number" onChange={props.textBoxChangeHandler}/>
+            <br/><br/>
+            <div>
+                <Button buttonText="+" clickHandler= {props.addButtonHandler}/>
+                <Button buttonText="-" clickHandler= {props.subtractButtonHandler}/>
             </div>
-        );
-    }
+        </div>
+    );
+}
+
+IncrementForm.propTypes= {
+    textInput: PropTypes.string.isRequired,
+    textBoxChangeHandler: PropTypes.func.isRequired,
+    addButtonHandler: PropTypes.func.isRequired,
+    subtractButtonHandler: PropTypes.func.isRequired
 }
 
 export default IncrementForm;
