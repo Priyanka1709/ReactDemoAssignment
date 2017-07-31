@@ -10,7 +10,11 @@ const Contact = (props) => {
                     <br/>
                     <label>Phone Number: </label>
                     <br/>
-                    <input type="text"/>
+                    <input type="number" required/>
+                    <br/>
+                    <label>Query: </label>
+                    <br/>
+                    <input type="textarea" rows="4" required/>
                     <br/>
                     <br/>
                     <input type="submit"/>

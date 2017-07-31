@@ -39,9 +39,10 @@ class IncrementForm extends React.Component{
     render(){
         return (
             <div className="center">
-               <input value= {this.state.textInput} type= "number" onChange={this.textBoxChangeHandler}/>
-               <br/><br/>
-               <div>
+                <h3>Increment Form</h3>
+                <input value= {this.state.textInput} type= "number" onChange={this.textBoxChangeHandler}/>
+                <br/><br/>
+                <div>
                     <Button buttonText="+" clickHandler= {this.addButtonHandler}/>
                     <Button buttonText="-" clickHandler= {this.subtractButtonHandler}/>
                 </div>
